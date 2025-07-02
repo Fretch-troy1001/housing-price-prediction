@@ -1,6 +1,6 @@
 # Ames Housing Price Prediction: An End-to-End Regression Analysis
 
-This project was created for *Ames Real Estate Partners*, a fictional mid-sized real estate agency. Their pricing strategy relied heavily on agent intuition—often inconsistent and hard to justify with clients. The goal was to build a data-driven model that could predict home prices more reliably and consistently across listings.
+This project was created for *Ames Real Estate Partners*, a fictional real estate agency. Their pricing strategy relied heavily on agent intuition often inconsistent and hard to justify with clients. The goal was to build a data-driven model that could predict home prices more reliably and consistently across listings.
 
 The project follows a full data science lifecycle: from loading and exploring the data, through feature engineering and model training, to delivering a final regression model tuned for performance and interpretability.
 
@@ -35,7 +35,7 @@ This initial inspection laid the groundwork for data cleaning and EDA.
 
 The goal of this phase was to identify patterns, test assumptions, and uncover the most predictive features.
 
-- **Analyzed the Target Variable:** SalePrice was heavily right-skewed. We noted this early for later transformation.
+- **Analyzed the Target Variable:** SalePrice was heavily right skewed. We noted this early for later transformation.
 - **Identified Top Numerical Features:** Using a correlation matrix, we ranked numerical variables based on their linear relationship with SalePrice.
 - **Categorical Impact:** Calculated median SalePrice per category for fields like `Neighborhood`, `KitchenQual`, and `GarageFinish`.
 - **Visual Exploration:** Created scatter plots and boxplots to confirm relationships, assess linearity, and detect significant outliers.
@@ -50,15 +50,15 @@ With our raw data understood and cleaned, we shifted to preparing it for modelin
 
 ### a. Feature Engineering
 We created new variables to capture meaningful patterns:
-- **`TotalSF`**: Combined basement, first, and second-floor areas into one measure of total square footage.
+- **`TotalSF`**: Combined basement, first, and second floor areas into one measure of total square footage.
 - **`HouseAge`**: Calculated as the difference between `YrSold` and `YearBuilt`.
 
 We also reassessed outliers using correlation and distribution plots.
 
 ### b. Feature Preparation & Encoding
-To make all features model-ready:
-- **Ordinal Encoding**: Applied to rank-based categories like `ExterQual` and `GarageCond`.
-- **One-Hot Encoding**: Used for nominal variables like `Neighborhood`, ensuring models don’t misinterpret arbitrary numeric mappings.
+To make all features model ready:
+- **Ordinal Encoding**: Applied to rank based categories like `ExterQual` and `GarageCond`.
+- **One Hot Encoding**: Used for nominal variables like `Neighborhood`, ensuring models don’t misinterpret arbitrary numeric mappings.
 - **Dropped `Id`** as it had no predictive value.
 
 ### c. Target Variable Transformation
@@ -70,7 +70,7 @@ To address the skewed distribution of `SalePrice`, we applied a log transformati
 
 We evaluated three regression models on the cleaned and engineered dataset:
 1. **Linear Regression** – served as our baseline model.
-2. **Random Forest** – introduced non-linear modeling power.
+2. **Random Forest** – introduced non linear modeling power.
 3. **XGBoost** – our final, tuned model using `GridSearchCV`.
 
 We split the data into training and test sets using `train_test_split`, ensuring unbiased performance measurement. XGBoost was ultimately selected for its balance of accuracy, interpretability, and generalization.
@@ -96,7 +96,7 @@ Based on model importance and earlier correlation analysis:
 
 ## Business Impact
 
-The model provides Ames Real Estate agents with a reliable pricing tool, replacing guesswork with data-backed estimates. It also offers transparency—helping agents explain that overall quality influence its value, and where investments (like kitchen upgrades) are likely to pay off. 
+The model provides Ames Real Estate agents with a reliable pricing tool, replacing guesswork with data backed estimates. It also offers transparency like helping agents explain that overall quality influence its value, and where investments (like kitchen upgrades) are likely to pay off. 
 Visualizations from PowerBI is also implemented to provide more insights to the model and its limitations. And how to use each features to have the most accurate pricing.
 
 ---
