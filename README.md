@@ -12,7 +12,7 @@ The project answers two key questions:
 1. **Can we build a regression model that predicts house prices with accuracy and consistency?**
 2. **Which features most strongly influence a home’s sale price?**
 
-![Dashboard Preview](images/Overall_Performance.png)
+![Dashboard Preview](images/github_price_housing.gif)
 
 ---
 
